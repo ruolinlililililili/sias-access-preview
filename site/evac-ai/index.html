@@ -1,0 +1,1584 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta name="robots" content="index, follow">
+  <link rel="icon" type="image/svg+xml" sizes="any" href="/sias-access-preview/assets/identity/sias-favicon.svg?v=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="EVAC-AI is an interdisciplinary research initiative at the University of Southern California building human-centered AI for wildfire evacuation, resilient communities, and high-impact collaboration.">
+  <title>EVAC-AI @USC</title>
+  <link rel="stylesheet" href="/sias-access-preview/assets/fonts/migration/37fcfc2bc8f60f1d.css">
+  <style>
+    :root{
+      --bg:#f6f1e8;
+      --paper:#fffdf8;
+      --ink:#171312;
+      --muted:#635955;
+      --muted-2:#857873;
+      --line:rgba(23,19,18,.12);
+      --panel:rgba(14,13,16,.82);
+      --panel-line:rgba(255,255,255,.1);
+      --ember:#d9482b;
+      --ember-2:#ff6a3d;
+      --gold:#f2bf5e;
+      --moss:#6a8f4e;
+      --sky:#7ca4d7;
+      --cream:#efe5d2;
+      --max:1240px;
+      --shadow:0 24px 80px rgba(23,19,18,.14);
+      --radius:28px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Source Sans 3",sans-serif;
+      color:var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(242,191,94,.28), transparent 26%),
+        radial-gradient(circle at right 10% top 18%, rgba(217,72,43,.12), transparent 25%),
+        linear-gradient(180deg, #f6f1e8 0%, #f4eee4 48%, #fbf7f0 100%);
+      line-height:1.5;
+    }
+
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit}
+
+    :focus-visible{
+      outline:3px solid var(--gold);
+      outline-offset:4px;
+    }
+
+    .skip-link{
+      position:fixed;
+      top:12px;
+      left:12px;
+      z-index:100;
+      padding:10px 14px;
+      border-radius:8px;
+      background:#fff;
+      color:var(--ink);
+      box-shadow:0 8px 24px rgba(0,0,0,.22);
+      transform:translateY(-160%);
+    }
+
+    .skip-link:focus{transform:translateY(0)}
+
+    .shell{max-width:var(--max);margin:0 auto;padding:0 24px}
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-size:12px;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+      color:var(--ember);
+      font-weight:700;
+    }
+    .eyebrow::before{
+      content:"";
+      width:38px;
+      height:1px;
+      background:currentColor;
+      opacity:.7;
+    }
+
+    .site-header{
+      position:sticky;
+      top:0;
+      z-index:40;
+      background:#fff;
+      border-bottom:1px solid rgba(23,19,18,.06);
+    }
+
+    .site-navigation .shell{
+      min-height:82px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+    }
+
+    .branding-bar{
+      border-bottom:1px solid rgba(23,19,18,.08);
+      background:#fff;
+    }
+
+    .branding-bar .shell{
+      min-height:54px;
+      display:flex;
+      align-items:center;
+      justify-content:flex-end;
+    }
+
+    .header-right{
+      display:flex;
+      align-items:center;
+      gap:28px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      font-weight:700;
+      letter-spacing:-.04em;
+      font-size:30px;
+      line-height:1;
+      white-space:nowrap;
+    }
+
+    .brand-name{display:block;color:#990000}
+
+    .brand-meta{
+      display:block;
+      max-width:116px;
+      padding-left:14px;
+      border-left:1px solid var(--line);
+      color:var(--muted-2);
+      font-size:10px;
+      font-weight:700;
+      letter-spacing:.13em;
+      line-height:1.25;
+      text-transform:uppercase;
+      white-space:normal;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      font-size:12px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-weight:500;
+    }
+
+    nav a{
+      position:relative;
+      color:var(--muted);
+    }
+
+    nav a::after{
+      content:"";
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:-10px;
+      height:2px;
+      background:var(--ember);
+      transform:scaleX(0);
+      transform-origin:left;
+      transition:transform .25s ease;
+    }
+
+    nav a:hover::after,
+    nav a:focus-visible::after{transform:scaleX(1)}
+
+    .usc-home-link{
+      display:inline-flex;
+      align-items:center;
+    }
+
+    .usc-home-link img{
+      display:block;
+      width:128px;
+      height:auto;
+    }
+
+    .institutional-identity{
+      display:flex;
+      align-items:center;
+      gap:20px;
+      padding:6px 0;
+    }
+
+    .viterbi-home-link{display:inline-flex;align-items:center}
+    .viterbi-home-link img{display:block;width:142px;height:auto}
+
+    .cta-link{
+      padding:11px 16px;
+      border-radius:999px;
+      background:var(--ink);
+      color:#fff;
+      box-shadow:0 12px 30px rgba(23,19,18,.12);
+    }
+
+    main{overflow:hidden}
+
+    .hero{
+      position:relative;
+      padding:0 0 72px;
+    }
+
+    .hero-grid{
+      display:block;
+      max-width:none;
+      padding:0;
+    }
+
+    .hero-copy{
+      position:relative;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      padding:clamp(74px, 10vw, 132px) max(24px, calc((100vw - var(--max)) / 2 + 24px)) 160px;
+      min-height:min(780px, calc(100svh - 82px));
+      overflow:hidden;
+      color:#fff7ee;
+      background:
+        linear-gradient(180deg, rgba(5,6,8,.22) 0%, rgba(5,6,8,.58) 100%),
+        linear-gradient(90deg, rgba(3,4,6,.99) 0%, rgba(3,4,6,.96) 24%, rgba(3,4,6,.82) 43%, rgba(3,4,6,.42) 70%, rgba(3,4,6,.24) 100%),
+        url("assets/opening-collage.png") center 45%/cover no-repeat;
+      box-shadow:inset 0 -1px rgba(255,255,255,.12);
+      isolation:isolate;
+    }
+
+    .hero-copy::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(122deg, rgba(217,72,43,.04), transparent 42%),
+        radial-gradient(circle at 74% 19%, rgba(242,191,94,.10), transparent 27%),
+        linear-gradient(90deg, transparent 64%, rgba(217,72,43,.16));
+      mix-blend-mode:screen;
+      z-index:0;
+    }
+
+    .hero-copy > .eyebrow,
+    .hero-copy > h1,
+    .hero-copy > p,
+    .hero-copy > .hero-actions{position:relative;z-index:1}
+
+    .hero-route{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      z-index:0;
+      pointer-events:none;
+      overflow:visible;
+    }
+
+    .hero-route path{
+      fill:none;
+      stroke:rgba(255,235,191,.52);
+      stroke-width:1.35;
+      stroke-dasharray:7 12;
+      animation:route-drift 8s linear infinite;
+    }
+
+    .hero-route circle{fill:var(--ember-2);filter:drop-shadow(0 0 10px rgba(255,106,61,.8))}
+
+    @keyframes route-drift{to{stroke-dashoffset:-152}}
+
+    .hero-copy h1{
+      margin:18px 0 18px;
+      max-width:820px;
+      font-size:clamp(64px, 8.2vw, 122px);
+      line-height:.96;
+      letter-spacing:-.07em;
+    }
+
+    .hero-copy h1 em{
+      display:block;
+      font-family:"Source Sans 3",sans-serif;
+      font-style:italic;
+      font-weight:400;
+      color:var(--gold);
+      letter-spacing:-.03em;
+    }
+
+    .hero-faster{
+      display:inline-block;
+      position:relative;
+      z-index:1;
+      margin-left:.12em;
+      padding:0 .1em .03em;
+      border-radius:.12em;
+      background:#990000;
+      color:var(--gold);
+      line-height:.82;
+    }
+
+    .hero-slogan{
+      max-width:620px;
+      margin:-2px 0 14px;
+      color:var(--ember-2);
+      font-size:clamp(20px, 2vw, 27px);
+      font-weight:700;
+      line-height:1.12;
+      letter-spacing:-.035em;
+    }
+
+    .hero-copy p{
+      max-width:560px;
+      margin:0;
+      font-size:18px;
+      color:rgba(255,247,238,.88);
+    }
+
+    .hero-stamp{
+      position:absolute;
+      top:32px;
+      right:max(24px, calc((100vw - var(--max)) / 2 + 24px));
+      display:flex;
+      gap:10px;
+      align-items:center;
+      padding:11px 15px;
+      border:1px solid rgba(255,255,255,.22);
+      border-radius:999px;
+      background:rgba(12,11,13,.32);
+      backdrop-filter:blur(12px);
+      color:rgba(255,247,238,.9);
+      font-size:11px;
+      font-weight:700;
+      text-transform:uppercase;
+      letter-spacing:.12em;
+    }
+
+    .hero-stamp b{color:var(--gold)}
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-top:30px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      min-height:52px;
+      padding:0 22px;
+      border-radius:999px;
+      font-size:13px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      font-weight:700;
+      transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{
+      background:linear-gradient(135deg, var(--ember), var(--ember-2));
+      color:#fff;
+      box-shadow:0 18px 40px rgba(217,72,43,.34);
+    }
+    .btn-secondary{
+      color:#fff;
+      border:1px solid rgba(255,255,255,.24);
+      background:rgba(255,255,255,.08);
+    }
+    .btn-ghost{
+      color:var(--ink);
+      background:rgba(23,19,18,.05);
+      border:1px solid rgba(23,19,18,.1);
+    }
+
+    .hero-ribbon{
+      position:absolute;
+      left:max(24px, calc((100vw - var(--max)) / 2 + 24px));
+      right:max(24px, calc((100vw - var(--max)) / 2 + 24px));
+      bottom:28px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+
+    .ribbon-card{
+      padding:14px 16px;
+      border-radius:20px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      backdrop-filter:blur(10px);
+    }
+
+    .ribbon-card span{
+      display:block;
+      font-size:11px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      color:rgba(255,247,238,.66);
+      margin-bottom:8px;
+    }
+
+    .ribbon-card strong{
+      display:block;
+      font-size:16px;
+      line-height:1.25;
+    }
+
+    .overview-panel,
+    .ask-panel{
+      border-radius:32px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+
+    .project-overview{
+      background:
+        radial-gradient(circle at 8% 8%, rgba(242,191,94,.18), transparent 30%),
+        linear-gradient(180deg, rgba(255,253,248,.36), rgba(234,224,207,.6));
+    }
+
+    .overview-panel{
+      background:
+        radial-gradient(circle at top right, rgba(124,164,215,.18), transparent 34%),
+        linear-gradient(180deg, #fff8ed 0%, #fffdf8 100%);
+      padding:clamp(24px, 4vw, 52px);
+    }
+
+    .overview-header{
+      display:grid;
+      grid-template-columns:.88fr 1.12fr;
+      gap:clamp(26px, 5vw, 72px);
+      align-items:start;
+      margin-bottom:28px;
+    }
+
+    .overview-copy h2{
+      margin:10px 0 0;
+      font-size:clamp(40px, 5vw, 68px);
+      line-height:.92;
+      letter-spacing:-.065em;
+    }
+
+    .overview-copy p{
+      margin:18px 0 0;
+      color:var(--muted);
+      font-size:17px;
+      max-width:520px;
+    }
+
+    .meta-grid{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+    }
+
+    .meta-item{
+      padding:16px 18px;
+      border-radius:22px;
+      background:rgba(255,255,255,.7);
+      border:1px solid rgba(23,19,18,.08);
+    }
+
+    .meta-item span{
+      display:block;
+      font-size:11px;
+      letter-spacing:.08em;
+      text-transform:uppercase;
+      color:var(--muted-2);
+      margin-bottom:9px;
+    }
+
+    .meta-item strong{
+      display:block;
+      font-size:22px;
+      letter-spacing:-.04em;
+    }
+
+    .figure-wrap{
+      border-radius:24px;
+      overflow:hidden;
+      border:1px solid rgba(23,19,18,.08);
+      background:#fff;
+    }
+
+    .ask-panel{
+      background:
+        linear-gradient(145deg, rgba(23,19,18,.97), rgba(33,24,22,.94));
+      color:#fff7ee;
+      position:relative;
+    }
+
+    .ask-panel::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        radial-gradient(circle at 85% 20%, rgba(217,72,43,.24), transparent 22%),
+        radial-gradient(circle at 20% 100%, rgba(242,191,94,.12), transparent 30%);
+      pointer-events:none;
+    }
+
+    .ask-panel h3{
+      margin:12px 0 10px;
+      font-size:clamp(38px, 3.8vw, 58px);
+      line-height:1;
+      letter-spacing:-.05em;
+    }
+
+    .ask-panel p{
+      margin:0 0 18px;
+      font-size:17px;
+      color:rgba(255,247,238,.76);
+    }
+
+    .ask-list{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+      margin:0;
+    }
+
+    .ask-item{
+      padding:20px;
+      border:1px solid var(--panel-line);
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+    }
+
+    .ask-item strong{
+      display:block;
+      margin-bottom:4px;
+      font-size:15px;
+    }
+
+    .ask-item span{
+      color:rgba(255,247,238,.68);
+      font-size:13px;
+    }
+
+    section{
+      padding:92px 0;
+    }
+
+    .section-head{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:40px;
+      align-items:end;
+      margin-bottom:34px;
+    }
+
+    .section-head h2{
+      margin:12px 0 0;
+      font-size:clamp(38px, 5vw, 64px);
+      line-height:.96;
+      letter-spacing:-.06em;
+    }
+
+    .section-head p{
+      margin:0;
+      font-size:17px;
+      color:var(--muted);
+      max-width:620px;
+    }
+
+    .story-grid{
+      display:grid;
+      grid-template-columns:1.18fr .82fr;
+      gap:24px;
+      align-items:stretch;
+    }
+
+    .manifesto,
+    .impact-card{
+      border-radius:32px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .manifesto{
+      padding:34px;
+      display:grid;
+      gap:24px;
+    }
+
+    .manifesto-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
+    }
+
+    .manifesto-grid article{
+      padding:20px;
+      border-radius:24px;
+      background:linear-gradient(180deg, rgba(23,19,18,.03), rgba(23,19,18,.01));
+      border:1px solid rgba(23,19,18,.08);
+    }
+
+    .manifesto-grid h3{
+      margin:0 0 10px;
+      font-size:18px;
+      letter-spacing:-.04em;
+    }
+
+    .manifesto-grid p,
+    .impact-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .impact-card{
+      padding:30px;
+      background:
+        linear-gradient(180deg, rgba(124,164,215,.1), rgba(255,255,255,.75)),
+        var(--paper);
+    }
+
+    .impact-card .stats{
+      display:grid;
+      gap:12px;
+      margin-top:22px;
+    }
+
+    .impact-stat{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      align-items:flex-end;
+      padding:16px 0;
+      border-bottom:1px solid rgba(23,19,18,.08);
+    }
+
+    .impact-stat:last-child{border-bottom:0}
+
+    .impact-stat strong{
+      font-size:34px;
+      letter-spacing:-.06em;
+      line-height:.95;
+    }
+
+    .impact-stat span{
+      max-width:200px;
+      text-align:right;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .thrust-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .thrust-card{
+      min-height:370px;
+      padding:24px;
+      border-radius:28px;
+      color:#1a1716;
+      position:relative;
+      overflow:hidden;
+      border:1px solid rgba(23,19,18,.08);
+      box-shadow:var(--shadow);
+    }
+
+    .thrust-card::before{
+      content:"";
+      position:absolute;
+      inset:auto -20% -12% auto;
+      width:180px;
+      height:180px;
+      border-radius:50%;
+      background:rgba(255,255,255,.22);
+      filter:blur(8px);
+    }
+
+    .thrust-card span{
+      display:inline-flex;
+      width:42px;
+      height:42px;
+      border-radius:50%;
+      align-items:center;
+      justify-content:center;
+      font-size:13px;
+      font-weight:700;
+      background:rgba(255,255,255,.62);
+      border:1px solid rgba(23,19,18,.08);
+    }
+
+    .thrust-card h3{
+      margin:18px 0 10px;
+      font-size:26px;
+      line-height:1;
+      letter-spacing:-.05em;
+    }
+
+    .thrust-card p{
+      margin:0 0 20px;
+      color:rgba(23,19,18,.76);
+      font-size:14px;
+    }
+
+    .thrust-card ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+      font-size:13px;
+      color:rgba(23,19,18,.82);
+    }
+
+    .thrust-card li{
+      padding-top:10px;
+      border-top:1px solid rgba(23,19,18,.1);
+    }
+
+    .thrust-1{background:linear-gradient(180deg, #dff0cd 0%, #edf8e2 100%)}
+    .thrust-2{background:linear-gradient(180deg, #dce8f6 0%, #edf4fb 100%)}
+    .thrust-3{background:linear-gradient(180deg, #f8e1d3 0%, #fdf0e7 100%)}
+    .thrust-4{background:linear-gradient(180deg, #e6e3e5 0%, #f4f2f3 100%)}
+
+    .lab-grid{
+      display:grid;
+      gap:22px;
+    }
+
+    .lab-map,
+    .lab-notes{
+      border-radius:32px;
+      overflow:hidden;
+      background:var(--paper);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .lab-map img{
+      width:100%;
+      height:auto;
+      object-fit:contain;
+    }
+
+    .lab-notes{
+      padding:30px;
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:14px;
+    }
+
+    .lab-note{
+      padding:18px 20px;
+      border-radius:22px;
+      background:linear-gradient(180deg, rgba(23,19,18,.03), rgba(23,19,18,.01));
+      border:1px solid rgba(23,19,18,.08);
+    }
+
+    .lab-note strong{
+      display:block;
+      margin-bottom:8px;
+      font-size:18px;
+      letter-spacing:-.04em;
+    }
+
+    .lab-note p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .team-section{
+      background:linear-gradient(180deg, rgba(255,253,248,.45), rgba(234,224,207,.52));
+    }
+
+    .people-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+
+    .person-card{
+      position:relative;
+      min-height:360px;
+      padding:22px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      border-radius:28px;
+      background:rgba(255,253,248,.78);
+      box-shadow:var(--shadow);
+    }
+
+    .person-card:nth-child(1){background:linear-gradient(145deg,#e3edf7,#fffdf8 70%)}
+    .person-card:nth-child(2){background:linear-gradient(145deg,#f2ead9,#fffdf8 70%)}
+    .person-card:nth-child(3){background:linear-gradient(145deg,#f6e4da,#fffdf8 70%)}
+    .person-card:nth-child(4){background:linear-gradient(145deg,#e7e8e6,#fffdf8 70%)}
+
+    .person-card > *{position:relative;z-index:1}
+    .person-photo{
+      position:absolute;
+      top:20px;
+      right:20px;
+      z-index:2;
+      width:88px;
+      aspect-ratio:1;
+      object-fit:cover;
+      border:2px solid rgba(255,253,248,.9);
+      border-radius:50%;
+      box-shadow:0 8px 18px rgba(23,19,18,.18);
+    }
+    .person-role{min-height:42px;padding-right:112px;color:var(--ember);font-size:11px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+    .person-card h3{min-height:58px;margin:18px 104px 7px 0;font-size:30px;letter-spacing:-.06em;line-height:.96}
+    .person-card h3 a:hover,
+    .person-card h3 a:focus-visible{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:5px}
+    .person-title{min-height:172px;margin:0;color:var(--muted);font-size:13px}
+    .person-thrust{display:inline-flex;margin-top:22px;padding:7px 10px;border:1px solid rgba(23,19,18,.12);border-radius:999px;background:rgba(255,255,255,.55);font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .person-focus{margin:20px 0 0;padding-top:16px;border-top:1px solid rgba(23,19,18,.11);font-size:13px}
+    .person-focus strong{color:var(--ember)}
+
+    .collab{
+      background:
+        linear-gradient(180deg, rgba(23,19,18,.96), rgba(23,19,18,.98));
+      color:#fff8ee;
+      position:relative;
+    }
+
+    .collab::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(90deg, transparent 0 5%, rgba(255,255,255,.05) 5% 5.1%, transparent 5.1% 100%),
+        radial-gradient(circle at 18% 15%, rgba(217,72,43,.18), transparent 18%),
+        radial-gradient(circle at 80% 85%, rgba(124,164,215,.12), transparent 18%);
+      pointer-events:none;
+    }
+
+    .collab .section-head p{color:rgba(255,247,238,.72)}
+
+    .lane-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+
+    .lane{
+      padding:22px;
+      border-radius:26px;
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.1);
+      backdrop-filter:blur(10px);
+    }
+
+    .lane strong{
+      display:block;
+      font-size:22px;
+      line-height:1.05;
+      letter-spacing:-.05em;
+      margin-bottom:10px;
+    }
+
+    .lane p{
+      margin:0 0 18px;
+      color:rgba(255,247,238,.72);
+      font-size:14px;
+    }
+
+    .lane ul{
+      margin:0;
+      padding:0;
+      list-style:none;
+      display:grid;
+      gap:10px;
+      font-size:13px;
+      color:rgba(255,247,238,.82);
+    }
+
+    .lane li{
+      padding-top:10px;
+      border-top:1px solid rgba(255,255,255,.1);
+    }
+
+    .translation-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:16px;
+    }
+
+    .translation-card{
+      padding:22px;
+      border-radius:26px;
+      background:var(--paper);
+      border:1px solid var(--line);
+      box-shadow:var(--shadow);
+    }
+
+    .translation-card strong{
+      display:block;
+      margin:8px 0 10px;
+      font-size:22px;
+      line-height:1.02;
+      letter-spacing:-.05em;
+    }
+
+    .translation-card p{
+      margin:0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .closing{
+      padding-top:0;
+    }
+
+    .closing-card{
+      position:relative;
+      overflow:hidden;
+      padding:44px;
+      border-radius:36px;
+      background:
+        linear-gradient(125deg, rgba(217,72,43,.92), rgba(120,45,25,.92)),
+        url("assets/evac-ai-visual-direction.png") center/cover no-repeat;
+      color:#fff9f2;
+      box-shadow:var(--shadow);
+    }
+
+    .closing-card::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:linear-gradient(90deg, rgba(23,19,18,.72) 0%, rgba(23,19,18,.42) 54%, rgba(23,19,18,.62) 100%);
+    }
+
+    .closing-content{
+      position:relative;
+      z-index:1;
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:34px;
+      align-items:end;
+    }
+
+    .closing h2{
+      margin:14px 0 14px;
+      font-size:clamp(42px, 5vw, 72px);
+      line-height:.95;
+      letter-spacing:-.07em;
+    }
+
+    .closing p{
+      margin:0;
+      max-width:640px;
+      font-size:18px;
+      color:rgba(255,249,242,.82);
+    }
+
+    .closing-panel{
+      padding:26px;
+      border-radius:28px;
+      background:linear-gradient(145deg, #990000, #c32222);
+      border:1px solid rgba(242,191,94,.62);
+      backdrop-filter:blur(12px);
+      box-shadow:0 18px 42px rgba(0,0,0,.22);
+    }
+
+    .closing-panel strong{
+      display:block;
+      font-size:15px;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      margin-bottom:12px;
+    }
+
+    .closing-panel p{
+      font-size:15px;
+      margin-bottom:18px;
+    }
+
+    .contact-email{
+      display:inline-block;
+      margin-top:7px;
+      color:var(--gold);
+      font-size:20px;
+      font-weight:700;
+      letter-spacing:-.02em;
+    }
+
+    .footer{
+      padding:32px 0 48px;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .footer .shell{
+      display:flex;
+      justify-content:space-between;
+      gap:24px;
+      align-items:flex-start;
+      border-top:1px solid rgba(23,19,18,.08);
+      padding-top:24px;
+    }
+
+    .footer .shell > div:last-child{white-space:nowrap}
+
+    .reveal{
+      opacity:0;
+      transform:translateY(22px);
+      transition:opacity .8s ease, transform .8s ease;
+    }
+
+    .reveal.is-visible{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{
+        animation-duration:.01ms !important;
+        animation-iteration-count:1 !important;
+        scroll-behavior:auto !important;
+        transition-duration:.01ms !important;
+      }
+      .reveal{opacity:1;transform:none}
+    }
+
+    @media (max-width: 1120px){
+      nav{display:none}
+      .story-grid,
+      .lab-grid,
+      .closing-content,
+      .section-head{grid-template-columns:1fr}
+      .thrust-grid,
+      .translation-grid,
+      .lane-grid,
+      .people-grid{grid-template-columns:repeat(2,1fr)}
+      .manifesto-grid{grid-template-columns:1fr}
+      .hero-copy{min-height:650px}
+      .overview-header{grid-template-columns:1fr}
+      .hero-ribbon{grid-template-columns:repeat(2,1fr)}
+      .lab-notes{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media (max-width: 720px){
+      .shell{padding:0 18px}
+      .site-navigation .shell{min-height:74px}
+      .brand{font-size:27px;gap:10px}
+      .brand-meta{max-width:96px;padding-left:10px;font-size:9px}
+      .institutional-identity{gap:12px}
+      .usc-home-link img{width:70px}
+      .viterbi-home-link img{width:94px}
+      .hero{padding-bottom:46px}
+      .hero-copy{
+        justify-content:flex-end;
+        padding:96px 24px 238px;
+        min-height:680px;
+        background-position:59% center;
+      }
+      .hero-copy h1{font-size:clamp(54px, 16vw, 78px)}
+      .hero-copy p{font-size:17px}
+      .hero-stamp{top:18px;left:18px;right:auto;font-size:10px}
+      .hero-stamp span{display:none}
+      .hero-route{opacity:.52}
+      .hero-ribbon{left:18px;right:18px;bottom:18px;grid-template-columns:1fr}
+      .meta-grid,
+      .thrust-grid,
+      .translation-grid,
+      .lane-grid,
+      .people-grid,
+      .lab-notes{grid-template-columns:1fr}
+      .closing-card,
+      .manifesto,
+      .impact-card,
+      .lab-notes,
+      .overview-panel{padding:22px}
+      .footer .shell{display:block}
+    }
+   .hero-stamp.nsf-support{display:flex;align-items:center;gap:14px}.nsf-support>img{width:56px;height:56px;object-fit:contain;flex-shrink:0}.nsf-support>div{display:flex;flex-direction:column;gap:5px}
+
+    .funding-strip{background:#f7f4ee;border-bottom:1px solid #e6e0d7;padding:14px 0}
+    .funding-strip .hero-stamp.nsf-support{position:static;display:flex;justify-content:flex-start;gap:12px;padding:0;border:0;border-radius:0;background:none;backdrop-filter:none;color:#555;font-size:10px;letter-spacing:.07em}
+    .funding-strip .nsf-support>img{width:42px;height:42px}
+    .funding-strip .hero-stamp b{color:#34434a}
+    .funding-strip .hero-stamp span{display:block;font-weight:500;line-height:1.6}
+
+    /* Compact section rhythm; keep the opening artwork unobstructed. */
+    main>section{padding-top:44px;padding-bottom:44px}
+    main>.hero{padding:0}
+    .section-head{margin-bottom:26px;gap:28px}
+    .overview-header{margin-bottom:22px;gap:32px}
+    .overview-panel{padding:32px}
+    .footer{padding:24px 0 30px}
+    @media(max-width:1120px){.section-head{gap:18px}}
+    @media(max-width:720px){
+      main>section{padding-top:30px;padding-bottom:30px}
+      main>.hero{padding:0}
+      .section-head{margin-bottom:22px;gap:14px}
+      .overview-panel{padding:22px}
+      .overview-header{gap:20px}
+      .hero-copy{min-height:0;padding:48px 24px 24px}
+      .hero-ribbon{position:relative;left:auto;right:auto;bottom:auto;margin-top:26px;gap:8px}
+      .ribbon-card{padding:12px 14px}
+    }
+
+    /* Bring the opening message up instead of vertically centering it. */
+    .hero-copy{justify-content:flex-start;min-height:0;padding-top:36px;padding-bottom:26px}
+    .hero-ribbon{position:relative;left:auto;right:auto;bottom:auto;margin-top:28px}
+    @media(max-width:720px){.hero-copy{padding-top:28px;padding-bottom:22px}.hero-ribbon{margin-top:22px}}
+
+    .project-branding{display:flex;align-items:center;gap:22px;flex-shrink:0}
+    .nav-funding{display:flex;align-items:center;gap:9px;color:#566068;font-size:10px;line-height:1.4}
+    .nav-funding img{display:block;width:38px;height:38px;object-fit:contain}
+    .nav-funding>div{display:flex;flex-direction:column;gap:2px}
+    .nav-funding b{font-weight:600;color:#34434a}
+    .site-navigation .shell{gap:18px}
+    .header-right nav{gap:14px;font-size:11px}
+    @media(max-width:720px){.project-branding{gap:16px}.nav-funding{font-size:9px;gap:7px}.nav-funding img{width:32px;height:32px}.site-navigation .shell{min-height:70px;gap:0}}
+
+    .branding-bar .shell{justify-content:space-between;gap:16px}
+    .sias-home-link{display:inline-flex;align-items:center;gap:10px;color:#52606a;font-size:11px;white-space:nowrap;text-decoration:none;padding:6px 0}
+    .sias-home-link img{display:block;width:96px;height:auto}
+    .sias-home-link:hover{color:#990000}
+    .sias-home-link:focus-visible{outline:2px solid #990000;outline-offset:4px}
+    @media(max-width:520px){.sias-home-label{display:none}.sias-home-link{gap:6px}.sias-home-link img{width:80px}}
+    @supports (grid-template-rows:subgrid){
+      @media(min-width:721px){
+        .ribbon-card,.meta-item,.ask-item,.manifesto-grid article,.lab-note,.translation-card,.person-card{display:grid;grid-template-rows:subgrid;row-gap:0;align-content:start}
+        .ribbon-card,.meta-item,.ask-item,.manifesto-grid article,.lab-note{grid-row:span 2}
+        .translation-card{grid-row:span 3}
+        .person-card{grid-row:span 5}
+        .person-title{min-height:0}
+        .person-thrust{justify-self:start;align-self:start}
+        .lane,.thrust-card{display:grid;grid-template-rows:subgrid;row-gap:0;align-content:start}
+        .lane{grid-row:span 5}
+        .thrust-card{grid-row:span 6}
+        .lane ul,.thrust-card ul{display:grid;grid-row:span 3;grid-template-rows:subgrid;row-gap:0}
+        .lane li,.thrust-card li{padding:12px 0}
+      }
+    }
+    .person-focus{border-top:0;padding-top:0;margin-top:18px}
+    .impact-stat{border-bottom:0}
+</style>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="branding-bar">
+      <div class="shell">
+        <a class="sias-home-link" href="/sias-access-preview/" aria-label="Back to SIAS Lab home"><span aria-hidden="true">←</span><img src="/sias-access-preview/assets/images/sias-logo-hires.png" alt="SIAS Lab" width="564" height="228"><span class="sias-home-label">Back to SIAS</span></a>
+        <div class="institutional-identity" aria-label="University of Southern California and USC Viterbi School of Engineering">
+          <div class="viterbi-home-link">
+            <img src="assets/usc-viterbi-logo.png" alt="USC Viterbi School of Engineering">
+          </div>
+          <div class="usc-home-link">
+            <img src="assets/usc-primary-logotype.png" alt="University of Southern California">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="site-navigation">
+      <div class="shell">
+        <div class="project-branding"><a class="brand" href="#top"><span class="brand-name">EVAC-AI</span></a><div class="nav-funding"><img src="/sias-access-preview/assets/identity/nsf.png" alt="U.S. National Science Foundation" width="320" height="320"><div><b>NSF FIRE Award #2623936</b><span>$2M · 2026–2030</span></div></div></div>
+        <div class="header-right">
+          <nav aria-label="Primary">
+            <a href="#why">Why Now</a>
+            <a href="#thrusts">Research</a>
+            <a href="#team">Team</a>
+            <a href="#lab">Living Lab</a>
+            <a href="#collaborate">Collaborate</a>
+            <a class="cta-link" href="#contact">Partner With Us</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero">
+      <div class="shell hero-grid">
+        <div class="hero-copy reveal">
+          <svg class="hero-route" viewBox="0 0 1440 820" preserveAspectRatio="none" aria-hidden="true">
+            <path d="M760 710 C805 570, 700 495, 824 370 S1082 302, 1018 146 S1195 38, 1378 116" />
+            <path d="M860 806 C945 650, 1132 689, 1164 522 S1073 410, 1256 286 S1308 158, 1440 78" />
+            <circle cx="1018" cy="146" r="5" />
+            <circle cx="1164" cy="522" r="4" />
+          </svg>
+
+          <div class="eyebrow">An interdisciplinary research initiative at the University of Southern California.</div>
+          <h1>When Wildfire Moves, <em>Intelligence Must Move <span class="hero-faster">Faster.</span></em></h1>
+          <div class="hero-slogan">AI-Enabled Evacuation for Resilient Communities</div>
+          <p>The EVAC-AI initiative brings together researchers in AI, transportation, wildfire science, control, and human-centered decision making.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Join as a collaborator</a>
+            <a class="btn btn-secondary" href="#thrusts">Explore the research</a>
+          </div>
+          <div class="hero-ribbon">
+            <div class="ribbon-card">
+              <span>Problem</span>
+              <strong>Wildfire, mobility, and human behavior are deeply coupled.</strong>
+            </div>
+            <div class="ribbon-card">
+              <span>Approach</span>
+              <strong>Agentic AI with humans firmly in the loop.</strong>
+            </div>
+            <div class="ribbon-card">
+              <span>Focus</span>
+              <strong>Vulnerable populations, mixed autonomy, practical deployment.</strong>
+            </div>
+            <div class="ribbon-card">
+              <span>Invitation</span>
+              <strong>We want researchers, agencies, data partners, and communities at the table.</strong>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Why Now</div>
+            <h2>Evacuation is a systems problem, not a single-routing problem.</h2>
+          </div>
+          <p>Wildfire evacuation unfolds at the intersection of fire spread, road accessibility, institutional coordination, information quality, and unequal household resources. EVAC-AI is built around that reality, with special attention to vulnerable populations and mixed-autonomy transportation.</p>
+        </div>
+
+        <div class="story-grid">
+          <div class="manifesto reveal">
+            <div class="eyebrow">Core Thesis</div>
+            <div class="manifesto-grid">
+              <article>
+                <h3>Dynamic fire conditions change the network itself.</h3>
+                <p>Road accessibility, travel time, and safe routing can shift rapidly as fire and weather evolve.</p>
+              </article>
+              <article>
+                <h3>Households do not evacuate with equal capacity.</h3>
+                <p>Zero-car families, older adults, people with disabilities, and multi-lingual communities need different support.</p>
+              </article>
+              <article>
+                <h3>Human coordinators need decision support they can trust.</h3>
+                <p>We are building AI that helps people compare options, not automation that bypasses operational judgment.</p>
+              </article>
+            </div>
+          </div>
+
+          <aside class="impact-card reveal">
+            <div class="eyebrow">What Makes This Distinct</div>
+            <p>The proposal ties wildfire science, transportation systems, information design, and agentic AI into one research agenda with real translation pathways.</p>
+            <div class="stats">
+              <div class="impact-stat">
+                <strong>4</strong>
+                <span>Integrated research thrusts</span>
+              </div>
+              <div class="impact-stat">
+                <strong>1</strong>
+                <span>Los Angeles-centered living lab for grounded validation</span>
+              </div>
+              <div class="impact-stat">
+                <strong>2026</strong>
+                <span>Project period begins on September 1, 2026</span>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-overview" id="overview">
+      <div class="shell">
+        <div class="overview-panel reveal">
+          <div class="overview-header">
+            <div class="overview-copy">
+              <div class="eyebrow">Project Overview</div>
+              <h2>Four integrated thrusts, one connected system.</h2>
+              <p>EVAC-AI connects fire-network coupling, transportation optimization, information design, and human-centered AI into a practical research program for wildfire evacuation.</p>
+            </div>
+            <div class="meta-grid" aria-label="Project snapshot">
+              <div class="meta-item">
+                <span>NSF Award</span>
+                <strong>#2623936</strong>
+              </div>
+              <div class="meta-item">
+                <span>Total Award</span>
+                <strong>$2M</strong>
+              </div>
+              <div class="meta-item">
+                <span>Project Period</span>
+                <strong>2026-2030</strong>
+              </div>
+              <div class="meta-item">
+                <span>Leadership</span>
+                <strong>USC PI + Co-PIs</strong>
+              </div>
+            </div>
+          </div>
+          <div class="figure-wrap">
+            <img src="assets/main-figure.png" alt="EVAC-AI proposal figure showing vulnerable populations, AI agent, human coordinator, and four research thrusts.">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="thrusts">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Research Design</div>
+            <h2>Four thrusts, one mission.</h2>
+          </div>
+          <p>The EVAC-AI research program is deliberately end-to-end: understand evolving hazard, optimize movement under constraints, communicate effectively, and support human coordinators with useful AI interfaces.</p>
+        </div>
+
+        <div class="thrust-grid">
+          <article class="thrust-card thrust-1 reveal">
+            <span>01</span>
+            <h3>Fire-Network Coupling</h3>
+            <p>Translate wildfire and weather dynamics into time-varying road accessibility and network state.</p>
+            <ul>
+              <li>Fire spread potential and accessibility estimation</li>
+              <li>Retrospective event reconstruction and scenario generation</li>
+              <li>Inputs for downstream routing and coordination tools</li>
+            </ul>
+          </article>
+
+          <article class="thrust-card thrust-2 reveal">
+            <span>02</span>
+            <h3>Network Optimization</h3>
+            <p>Model evacuation when private vehicles, public fleets, and autonomous mobility all compete for limited capacity.</p>
+            <ul>
+              <li>Mixed-autonomy operations</li>
+              <li>Routing and control under behavioral uncertainty</li>
+              <li>Coordination across wildfire and transportation systems</li>
+            </ul>
+          </article>
+
+          <article class="thrust-card thrust-3 reveal">
+            <span>03</span>
+            <h3>Information Design</h3>
+            <p>Study how AI-assisted alerts and disclosures can be timely, accessible, and usable across diverse communities.</p>
+            <ul>
+              <li>Communication for vulnerable populations</li>
+              <li>Messaging under uncertainty and changing conditions</li>
+              <li>Designing for comprehension, trust, and action</li>
+            </ul>
+          </article>
+
+          <article class="thrust-card thrust-4 reveal">
+            <span>04</span>
+            <h3>Agentic AI For Coordinators</h3>
+            <p>Build closed-loop human-AI systems that help responders interpret state, weigh tradeoffs, and adapt in the loop.</p>
+            <ul>
+              <li>Human-centered coordination interfaces</li>
+              <li>Scenario comparison and action support</li>
+              <li>Practical translation to real operational workflows</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="team-section" id="team">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">The EVAC-AI Team</div>
+            <h2>Four fields. One evacuation system.</h2>
+          </div>
+          <p>EVAC-AI brings fire science, transportation, information design, and AI systems into one USC-based team built for operational translation.</p>
+        </div>
+
+        <div class="people-grid">
+          <article class="person-card reveal" data-index="01">
+            <img class="person-photo" src="assets/ruolin-li.jpg" alt="Ruolin Li">
+            <div class="person-role">Principal Investigator</div>
+            <h3><a href="https://viterbi.usc.edu/directory/faculty/Li/Ruolin">Ruolin Li</a></h3>
+            <p class="person-title">Sonny Astani Department of Civil and Environmental Engineering; Thomas Lord Department of Computer Science</p>
+            <span class="person-thrust">Thrust 2 · Network Optimization</span>
+            <p class="person-focus"><strong>Focus:</strong> Game-theoretic transportation optimization and guaranteed rescue access in mixed-autonomy systems.</p>
+          </article>
+          <article class="person-card reveal" data-index="02">
+            <img class="person-photo" src="assets/costas-synolakis.jpg" alt="Costas Synolakis">
+            <div class="person-role">Co-Principal Investigator</div>
+            <h3><a href="https://viterbi.usc.edu/directory/faculty/Synolakis/Costas">Costas Synolakis</a></h3>
+            <p class="person-title">Sonny Astani Department of Civil and Environmental Engineering</p>
+            <span class="person-thrust">Thrust 1 · Fire-Network Coupling</span>
+            <p class="person-focus"><strong>Focus:</strong> Dynamic fire behavior and road-accessibility inputs for evacuation decision support.</p>
+          </article>
+          <article class="person-card reveal" data-index="03">
+            <img class="person-photo" src="assets/ketan-savla.jpg" alt="Ketan Savla">
+            <div class="person-role">Co-Principal Investigator</div>
+            <h3><a href="https://viterbi.usc.edu/directory/faculty/Savla/Ketan">Ketan Savla</a></h3>
+            <p class="person-title">Sonny Astani Department of Civil and Environmental Engineering; Daniel J. Epstein Department of Industrial and Systems Engineering; Ming Hsieh Department of Electrical and Computer Engineering; Aerospace and Mechanical Engineering</p>
+            <span class="person-thrust">Thrust 3 · Information Design</span>
+            <p class="person-focus"><strong>Focus:</strong> Targeted information strategies for coordinated, capacity-aware departures.</p>
+          </article>
+          <article class="person-card reveal" data-index="04">
+            <img class="person-photo" src="assets/yue-zhao.png" alt="Yue Zhao">
+            <div class="person-role">Co-Principal Investigator</div>
+            <h3><a href="https://viterbi.usc.edu/directory/faculty/Zhao/Yue">Yue Zhao</a></h3>
+            <p class="person-title">Thomas Lord Department of Computer Science</p>
+            <span class="person-thrust">Thrust 4 · Agentic AI</span>
+            <p class="person-focus"><strong>Focus:</strong> Safety-critical, closed-loop AI for coordinators and affected communities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="lab">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Los Angeles Living Lab</div>
+            <h2>Real places. Real constraints. Real translation pressure.</h2>
+          </div>
+          <p>The project uses Los Angeles-centered case settings to connect historical wildfire events, transportation systems, community needs, and emergency operations. These are research focus areas that help us test ideas where complexity is unavoidable.</p>
+        </div>
+
+        <div class="lab-grid">
+          <div class="lab-map reveal">
+            <img src="assets/living-lab-map.png" alt="Living Lab map of the Los Angeles region showing evacuation networks and four highlighted research locations.">
+          </div>
+          <div class="lab-notes">
+            <div class="lab-note reveal">
+              <strong>Topanga</strong>
+              <p>Canyon evacuation dynamics, field-oriented validation, and practical resilience questions around constrained road access.</p>
+            </div>
+            <div class="lab-note reveal">
+              <strong>Eaton / Altadena</strong>
+              <p>Incident reconstruction and community-centered resilience research informed by recent wildfire experience.</p>
+            </div>
+            <div class="lab-note reveal">
+              <strong>Palisades</strong>
+              <p>Road access, alerting, and multimodal response challenges that expose how hazard and mobility evolve together.</p>
+            </div>
+            <div class="lab-note reveal">
+              <strong>Regional Scale</strong>
+              <p>Southern California mobility, planning, and inter-organizational coordination at the scale where policy and infrastructure decisions matter.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="collab" id="collaborate">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Collaboration Lanes</div>
+            <h2>There are multiple ways to build with us.</h2>
+          </div>
+          <p>We want this initiative to become a magnet for people who care about operational relevance. If you bring data, context, methods, testing environments, or on-the-ground knowledge, there is likely a meaningful role for you.</p>
+        </div>
+
+        <div class="lane-grid">
+          <article class="lane reveal">
+            <strong>Emergency agencies</strong>
+            <p>Shape the operational reality of the work.</p>
+            <ul>
+              <li>Coordinator workflows and exercise design</li>
+              <li>Feedback on trust, usability, and failure modes</li>
+              <li>Translation pathways into practice</li>
+            </ul>
+          </article>
+
+          <article class="lane reveal">
+            <strong>Transportation and planning partners</strong>
+            <p>Help us connect theory to real networks.</p>
+            <ul>
+              <li>Regional data and demand assumptions</li>
+              <li>Network operations and policy context</li>
+              <li>Scenario evaluation at multiple scales</li>
+            </ul>
+          </article>
+
+          <article class="lane reveal">
+            <strong>Community organizations</strong>
+            <p>Keep the work centered on people who need it most.</p>
+            <ul>
+              <li>Accessibility and inclusion needs</li>
+              <li>Messaging design and local trust dynamics</li>
+              <li>Co-creation with vulnerable populations</li>
+            </ul>
+          </article>
+
+          <article class="lane reveal">
+            <strong>Researchers and technology partners</strong>
+            <p>Expand the scientific and technical frontier.</p>
+            <ul>
+              <li>AI agents, HCI, optimization, wildfire modeling</li>
+              <li>Mapping, mobility, simulation, and evaluation tools</li>
+              <li>Open datasets, prototypes, and benchmarks</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="translation">
+      <div class="shell">
+        <div class="section-head reveal">
+          <div>
+            <div class="eyebrow">Translation Strategy</div>
+            <h2>Designed to move beyond papers.</h2>
+          </div>
+          <p>EVAC-AI is not just about producing models. It is about building datasets, interfaces, exercises, and relationships that make the research legible and useful outside the lab.</p>
+        </div>
+
+        <div class="translation-grid">
+          <article class="translation-card reveal">
+            <div class="eyebrow">01</div>
+            <strong>Co-create with practitioners and communities</strong>
+            <p>Ground research questions in operational pain points and lived experience from the start.</p>
+          </article>
+          <article class="translation-card reveal">
+            <div class="eyebrow">02</div>
+            <strong>Build reusable data and science assets</strong>
+            <p>Create retrospective studies, benchmarks, datasets, and evaluation scaffolds others can build on.</p>
+          </article>
+          <article class="translation-card reveal">
+            <div class="eyebrow">03</div>
+            <strong>Test through scenarios and exercises</strong>
+            <p>Use structured review, tabletop settings, and operational feedback to challenge prototypes before they travel.</p>
+          </article>
+          <article class="translation-card reveal">
+            <div class="eyebrow">04</div>
+            <strong>Turn lessons into capacity</strong>
+            <p>Translate results into tools, resources, and training materials that practitioners can actually use.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="contact">
+      <div class="shell">
+        <div class="closing-card reveal">
+          <div class="closing-content">
+            <div>
+              <div class="eyebrow">Work With EVAC-AI</div>
+              <h2>We are assembling the network around the mission now.</h2>
+              <p>If you want to help shape how wildfire evacuation intelligence is researched, tested, and translated, this is a good moment to join. We are especially interested in collaborators who care about both rigor and real-world usefulness.</p>
+            </div>
+            <div class="closing-panel">
+              <strong>Contact</strong>
+              <p>Ruolin Li, Principal Investigator<br>University of Southern California<br><span class="contact-email">ruolinl@usc.edu</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="shell">
+      <div>EVAC-AI is supported by the U.S. National Science Foundation under award 2623936, “FIRE-WUI: Agentic Artificial Intelligence for Wildfire Evacuation under Mixed Autonomy.” Project period: September 1, 2026 to August 31, 2030.</div>
+      <div><a href="https://www.usc.edu/privacy-notice/">USC Privacy Notice</a><br>EVAC-AI</div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.16 });
+
+    document.querySelectorAll(".reveal").forEach((node) => observer.observe(node));
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/sias-access-preview/assets/fonts/migration/63289430616edf0d.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/sias-access-preview/assets/fonts/migration/dcd6f814fd60ef7f.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/sias-access-preview/assets/fonts/migration/a9edc77773785ebd.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(/sias-access-preview/assets/fonts/migration/e9c6c0a715f84fc5.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(/sias-access-preview/assets/fonts/migration/3154e0e4e0c3f52f.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(/sias-access-preview/assets/fonts/migration/4f9a6ab7145f4fd2.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(/sias-access-preview/assets/fonts/migration/39713c8cb4a8ba03.ttf) format('truetype');
+}
