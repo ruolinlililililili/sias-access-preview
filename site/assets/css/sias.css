@@ -845,6 +845,9 @@ body a:hover .link-arrow{color:inherit}
 .join-email-fallback{margin:.85rem 0 0;font-size:.82rem;line-height:1.65;color:var(--muted);max-width:38rem}
 .join-email-fallback a{color:var(--accent);font-weight:500}
 .join-email-fallback strong{font-weight:500;color:var(--ink)}
+.join-email-subjects{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .4rem;font-size:.76rem}
+.join-email-subjects a{white-space:nowrap}
+@media(min-width:801px){.join-paths article{display:grid;grid-template-rows:subgrid;grid-row:span 8;row-gap:0;align-content:start}.join-paths article>.text-link{grid-row:7;justify-self:start}.join-paths .join-intake-action{grid-row:8;margin-top:0;display:grid;grid-template-rows:4.2rem auto;align-content:start}.join-intake-action .button{box-sizing:border-box;min-height:4.2rem}.join-paths .join-email-fallback{margin-top:.85rem}}
 
 /* Warm gold distinguishes editorial labels and roles from action links. */
 :root{--label-gold:#86631f;--label-gold-light:#d5b979;--label-gold-tint:#86631f10}
