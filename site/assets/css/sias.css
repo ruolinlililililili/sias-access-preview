@@ -149,14 +149,14 @@ html{font-size:16px;scroll-behavior:smooth}body{background:var(--paper);color:va
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url(/sias-access-preview/assets/fonts/cormorant-garamond-italic.ttf) format('truetype');
+  src: url(/assets/fonts/cormorant-garamond-italic.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Cormorant Garamond';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/sias-access-preview/assets/fonts/cormorant-garamond-normal.ttf) format('truetype');
+  src: url(/assets/fonts/cormorant-garamond-normal.ttf) format('truetype');
 }
 
 .manifesto-copy p{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(1.75rem,3vw,2.7rem);line-height:1.4;letter-spacing:-.015em}
@@ -175,14 +175,14 @@ html{font-size:16px;scroll-behavior:smooth}body{background:var(--paper);color:va
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/sias-access-preview/assets/fonts/kalam-400.ttf) format('truetype');
+  src: url(/assets/fonts/kalam-400.ttf) format('truetype');
 }
 @font-face {
   font-family: 'Kalam';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url(/sias-access-preview/assets/fonts/kalam-700.ttf) format('truetype');
+  src: url(/assets/fonts/kalam-700.ttf) format('truetype');
 }
 
 .manifesto-copy p{font-family:'Kalam','Segoe Print',cursive;font-size:clamp(1.45rem,2.4vw,2.2rem);font-weight:400;font-style:normal;line-height:1.6;letter-spacing:0}
@@ -196,7 +196,7 @@ html{font-size:16px;scroll-behavior:smooth}body{background:var(--paper);color:va
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url(/sias-access-preview/assets/fonts/marck-script-400.ttf) format('truetype');
+  src: url(/assets/fonts/marck-script-400.ttf) format('truetype');
 }
 
 .manifesto-copy p{font-family:'Marck Script','Segoe Print',cursive;font-size:clamp(1.65rem,2.65vw,2.45rem);font-weight:400;font-style:normal;line-height:1.55;letter-spacing:0}
@@ -574,7 +574,7 @@ html{font-size:16px;scroll-behavior:smooth}body{background:var(--paper);color:va
 @media(max-width:700px){.sponsor-row{grid-template-columns:repeat(2,1fr);gap:1.8rem 1.2rem}.sponsor-ncst img{width:180px}.sponsor-oliveri p{font-size:1.7rem}.sponsor-oliveri p span{font-size:.9rem}}
 
 /* Blend the official USDOT asset's white canvas into the paper background. */
-.sponsor img[src="/sias-access-preview/assets/identity/usdot.png"]{mix-blend-mode:multiply}
+.sponsor img[src="/assets/identity/usdot.png"]{mix-blend-mode:multiply}
 
 /* Applicant guide: readable preparation steps and compact expandable FAQs. */
 #main>.inner>.join-intro{padding:1.5rem 0 2.5rem;max-width:950px}.join-intro h2{font-size:2.8rem;margin:.4rem 0 1rem}.join-intro>p:not(.eyebrow){font-size:1.15rem;line-height:1.75}
@@ -585,14 +585,14 @@ html{font-size:16px;scroll-behavior:smooth}body{background:var(--paper);color:va
 .join-paths article{display:flex;flex-direction:column}.join-intake-action{margin-top:auto;padding-top:1.5rem}.join-intake-action .button{width:100%;text-align:center;font-size:.85rem}
 
 /* Distinct destinations: project portal and recruitment action. */
-.header-inner nav a[href="/sias-access-preview/evac-ai/"],.header-inner nav a[href="/sias-access-preview/join/"]{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.55rem .85rem;line-height:1.35;white-space:nowrap;border-radius:3px;transition:background .18s,color .18s,border-color .18s}
-.header-inner nav a[href="/sias-access-preview/evac-ai/"]{border:1px solid #b6c2c6;color:#233e49;background:#f1f5f5;font-weight:600;letter-spacing:.035em;font-size:.8rem}
-.header-inner nav a[href="/sias-access-preview/evac-ai/"]::after{content:'↗';font-size:.9rem;color:#657e88}
-.header-inner nav a[href="/sias-access-preview/evac-ai/"]:hover{background:#e3ecee;border-color:#6d8791;color:#172f3b!important}
-.header-inner nav a[href="/sias-access-preview/join/"]{border:1px solid #990000;background:#990000;color:#fff!important;font-weight:500}
-.header-inner nav a[href="/sias-access-preview/join/"]:hover{background:#750000;border-color:#750000}
-.header-inner nav a[href="/sias-access-preview/join/"][aria-current]{box-shadow:0 0 0 2px #fff,0 0 0 3px #990000}
-@media(max-width:1000px){.header-inner nav a[href="/sias-access-preview/evac-ai/"],.header-inner nav a[href="/sias-access-preview/join/"]{align-self:flex-start;min-width:132px;margin-top:.65rem;padding:.65rem 1rem;border-bottom:1px solid #b6c2c6!important}.header-inner nav a[href="/sias-access-preview/join/"]{border-bottom-color:#990000!important}}
+.header-inner nav a[href="/evac-ai/"],.header-inner nav a[href="/join/"]{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.55rem .85rem;line-height:1.35;white-space:nowrap;border-radius:3px;transition:background .18s,color .18s,border-color .18s}
+.header-inner nav a[href="/evac-ai/"]{border:1px solid #b6c2c6;color:#233e49;background:#f1f5f5;font-weight:600;letter-spacing:.035em;font-size:.8rem}
+.header-inner nav a[href="/evac-ai/"]::after{content:'↗';font-size:.9rem;color:#657e88}
+.header-inner nav a[href="/evac-ai/"]:hover{background:#e3ecee;border-color:#6d8791;color:#172f3b!important}
+.header-inner nav a[href="/join/"]{border:1px solid #990000;background:#990000;color:#fff!important;font-weight:500}
+.header-inner nav a[href="/join/"]:hover{background:#750000;border-color:#750000}
+.header-inner nav a[href="/join/"][aria-current]{box-shadow:0 0 0 2px #fff,0 0 0 3px #990000}
+@media(max-width:1000px){.header-inner nav a[href="/evac-ai/"],.header-inner nav a[href="/join/"]{align-self:flex-start;min-width:132px;margin-top:.65rem;padding:.65rem 1rem;border-bottom:1px solid #b6c2c6!important}.header-inner nav a[href="/join/"]{border-bottom-color:#990000!important}}
 
 /* Shared full-width manifesto, aligned with Research and Team. */
 #main>.inner>.page-manifesto{background:#080d12;color:#fff;border:0;padding:clamp(3rem,5vw,4.5rem) max(6vw,calc((100vw - 1120px)/2));margin:0 -4vw;width:100vw;box-sizing:border-box;display:block}
@@ -838,7 +838,7 @@ body a:hover .link-arrow{color:inherit}
 .research-end h2{font-size:clamp(1.6rem,2.55vw,2.3rem);line-height:1.3;white-space:nowrap;color:#243e63;text-shadow:0 1px 0 #fff,0 -1px 0 #152a4524;letter-spacing:-.025em}
 @media(max-width:900px){.research-end h2{white-space:normal;max-width:34ch;font-size:clamp(1.7rem,4vw,2.1rem)}}
 .research-end h2{font-weight:600}
-#main>.inner>.research-end{text-align:center;background:linear-gradient(to bottom,var(--paper),#fafaf700 20%,#fafaf700 76%,var(--paper)),linear-gradient(to right,var(--paper),#fafaf700 8%,#fafaf700 92%,var(--paper)),linear-gradient(#fafaf72b,#fafaf72b),url('/sias-access-preview/assets/images/research-wall-texture.png') center/cover no-repeat;padding:2.8rem 1rem 3rem!important;margin-bottom:1.2rem}
+#main>.inner>.research-end{text-align:center;background:linear-gradient(to bottom,var(--paper),#fafaf700 20%,#fafaf700 76%,var(--paper)),linear-gradient(to right,var(--paper),#fafaf700 8%,#fafaf700 92%,var(--paper)),linear-gradient(#fafaf72b,#fafaf72b),url('/assets/images/research-wall-texture.png') center/cover no-repeat;padding:2.8rem 1rem 3rem!important;margin-bottom:1.2rem}
 .research-end .research-margin-label{font-family:Manrope,var(--sans);font-size:.88rem;font-weight:500;color:#56646e;letter-spacing:.085em;margin-bottom:1.35rem;text-shadow:0 1px 0 #ffffffd9}
 .research-end h2{margin:0 auto;font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(1.45rem,2.8vw,2.5rem);font-style:normal;font-weight:700;line-height:1.45;white-space:normal;max-width:none;color:#203b60;letter-spacing:-.035em;text-shadow:0 1px 0 #fff,0 -1px 1px #162d4852,0 3px 4px #20395012}
 .research-end>div{justify-content:center;align-items:center}
