@@ -843,7 +843,7 @@ body a:hover .link-arrow{color:inherit}
 .research-end h2{margin:0 auto;font-family:'Libre Baskerville',Georgia,serif;font-size:clamp(1.45rem,2.8vw,2.5rem);font-style:normal;font-weight:700;line-height:1.45;white-space:normal;max-width:none;color:#203b60;letter-spacing:-.035em;text-shadow:0 1px 0 #fff,0 -1px 1px #162d4852,0 3px 4px #20395012}
 .research-end>div{justify-content:center;align-items:center}
 .join-paths .join-email-fallback{margin:.85rem 0 0;padding:.85rem .8rem .9rem 1rem;box-sizing:border-box;border-left:2px solid #b69a61;background:linear-gradient(115deg,#eee9de,#f4f1e9);font-size:.8rem;line-height:1.65;color:#56616a;max-width:38rem;box-shadow:0 2px 5px #554b3810}
-.join-notice-label{display:block;margin-bottom:.4rem;font-size:.66rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#826a35}
+.join-notice-label{font-size:inherit;font-weight:600;color:#826a35}
 .join-email-fallback a{color:var(--accent);font-weight:500}
 .join-email-fallback strong{font-weight:500;color:var(--ink)}
 .join-email-subjects{display:flex;flex-wrap:wrap;align-items:baseline;gap:.25rem .35rem;font-size:.72rem;margin-top:.25rem}
