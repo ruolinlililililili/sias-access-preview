@@ -351,6 +351,7 @@ html{font-size:16px;scroll-behavior:smooth}body{background:var(--paper);color:va
 .member-grid .student-profile .member-portrait img{width:190px;height:190px;max-width:100%;aspect-ratio:1;border-radius:50%;object-fit:cover;object-position:50% 35%}
 .member-grid :is(#kexin-wang,#jiaxin-hou,#yizhe-guan) .member-portrait img{object-position:50% 0%}
 .member-grid #gavin-huang .member-portrait img{object-position:50% 15%}
+.member-grid #luyao-niu .member-portrait img{object-position:55% 62%;transform:scale(1.12);clip-path:circle(44.64% at 50% 50%)}
 .student-profile .photo-tagline{max-width:210px;font-size:.8rem;line-height:1.5;margin-top:.85rem}
 .member-grid .student-profile h3{font-size:1.9rem;margin-bottom:.4rem}
 .student-profile .member-role{font-size:.95rem;line-height:1.5}
