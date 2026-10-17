@@ -894,7 +894,9 @@ body .eyebrow,.ruolin-overview .ruolin-identity .eyebrow{color:var(--label-gold)
 @media(max-width:760px){.footer-sponsor-logos{grid-template-columns:repeat(2,minmax(0,1fr))}.footer-sponsor-usc img{width:62px;height:42px}}
 
 /* Fall 2027 recruitment notice and application steps. */
-.join-backgrounds{position:relative;isolation:isolate;width:100%;max-width:none;margin:1.8rem 0 2rem;padding:1.4rem 0;background:none;box-sizing:border-box}
+.join-backgrounds{position:relative;isolation:isolate;width:100%;max-width:none;margin:1.8rem 0 2rem;padding:1.4rem 33px;background:none;box-sizing:border-box}
+.join-backgrounds p{max-width:none}
+@media(max-width:760px){.join-backgrounds{padding-inline:23px}}
 .join-backgrounds:before{content:"";position:absolute;inset:-.4rem -.7rem;z-index:-1;background:linear-gradient(115deg,#eee8dc 0%,#f5f1e9 52%,#e9eeec 100%);filter:blur(10px);mask-image:linear-gradient(to bottom,transparent,#000 20%,#000 80%,transparent);pointer-events:none}
 .join-backgrounds h2{font-size:clamp(1.65rem,2.5vw,2.1rem);margin:0 0 .9rem;color:var(--navy)}
 .join-backgrounds p{font-size:1rem;line-height:1.7;margin:0;color:var(--muted);text-align:justify;text-justify:inter-word}
